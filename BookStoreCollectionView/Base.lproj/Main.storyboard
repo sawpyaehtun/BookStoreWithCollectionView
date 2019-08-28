@@ -1,24 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kir-ge-ALH">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Bag View Controller-->
+        <scene sceneID="VwF-6T-KrH">
+            <objects>
+                <viewController id="sEd-VE-HKJ" customClass="BagViewController" customModule="BookStoreCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5eT-OU-efX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CQF-tE-s9i"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vPM-2J-E18"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="42P-m6-F1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="-1196.6517857142856"/>
+        </scene>
+        <!--Community View Controller-->
+        <scene sceneID="bhS-Sb-m5s">
+            <objects>
+                <viewController id="yrq-Ge-Skm" customClass="CommunityViewController" customModule="BookStoreCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mkr-N8-9Pv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Mv0-6J-Vin"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="e4H-eT-OYu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIv-WX-iEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="-1857.5892857142856"/>
+        </scene>
+        <!--Book Store View Controller-->
+        <scene sceneID="cxp-qr-Z83">
+            <objects>
+                <viewController id="8Lo-CA-Wyo" customClass="BookStoreViewController" customModule="BookStoreCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rKJ-Zl-h7V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aLc-Q6-Hfc">
+                                <rect key="frame" x="10" y="88" width="394" height="725"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zzN-AO-O8f">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zgL-kp-DKK" firstAttribute="bottom" secondItem="aLc-Q6-Hfc" secondAttribute="bottom" id="QlB-j9-I6C"/>
+                            <constraint firstItem="aLc-Q6-Hfc" firstAttribute="top" secondItem="zgL-kp-DKK" secondAttribute="top" id="sNx-fk-soI"/>
+                            <constraint firstItem="aLc-Q6-Hfc" firstAttribute="leading" secondItem="zgL-kp-DKK" secondAttribute="leading" constant="10" id="v43-IO-kLH"/>
+                            <constraint firstItem="zgL-kp-DKK" firstAttribute="trailing" secondItem="aLc-Q6-Hfc" secondAttribute="trailing" constant="10" id="yP3-DM-Ga1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zgL-kp-DKK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eGa-Cx-FIT"/>
+                    <connections>
+                        <outlet property="collectionViewBookStore" destination="aLc-Q6-Hfc" id="ht4-Vu-2v8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YUQ-kk-u5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="-536.38392857142856"/>
+        </scene>
+        <!--Book Shelf View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BookShelfViewController" customModule="BookStoreCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="duG-R8-i4T"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1048" y="134"/>
+        </scene>
+        <!--BookShelf-->
+        <scene sceneID="EYn-Pf-b0Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eJF-Wo-ycL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="BookShelf" image="bookShelf" selectedImage="bookShelf" id="T85-JH-Lhe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Ra-Kj-hf5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vaM-O5-fig"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u80-Ag-a3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="134"/>
+        </scene>
+        <!--BookStore-->
+        <scene sceneID="1oi-ZP-jJN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hxQ-Jt-PBM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="BookStore" image="bookStore" selectedImage="bookStore" id="PlH-U8-6Tf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mNv-3T-p9J">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Lo-CA-Wyo" kind="relationship" relationship="rootViewController" id="6iV-Ne-ejB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ca2-Vb-XAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="-536.38392857142856"/>
+        </scene>
+        <!--Bag-->
+        <scene sceneID="wh5-LM-lD5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4z7-ZI-VYD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bag" image="bag" selectedImage="bag" id="FTs-9P-TcO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e1q-Sa-3Cb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sEd-VE-HKJ" kind="relationship" relationship="rootViewController" id="0XQ-5Z-H8k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azk-4Y-LjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="-1196.6517857142856"/>
+        </scene>
+        <!--Community-->
+        <scene sceneID="kNA-xT-H7P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WLv-11-nsi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Community" image="community" selectedImage="community" id="fbF-1G-zhN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cta-Tw-ptN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yrq-Ge-Skm" kind="relationship" relationship="rootViewController" id="3ST-dG-d4w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JwQ-u7-6pZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="-1857.5892857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="oIk-Gf-WbB">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="kir-ge-ALH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QRP-BR-5he">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eJF-Wo-ycL" kind="relationship" relationship="viewControllers" id="sFW-p9-Ak6"/>
+                        <segue destination="hxQ-Jt-PBM" kind="relationship" relationship="viewControllers" id="1RP-wo-ZbW"/>
+                        <segue destination="4z7-ZI-VYD" kind="relationship" relationship="viewControllers" id="zjk-Pz-ZOr"/>
+                        <segue destination="WLv-11-nsi" kind="relationship" relationship="viewControllers" id="w7I-9I-t3G"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wwX-on-Hem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1074" y="-816"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bag" width="25" height="25"/>
+        <image name="bookShelf" width="25" height="25"/>
+        <image name="bookStore" width="25" height="25"/>
+        <image name="community" width="25" height="25"/>
+    </resources>
 </document>
